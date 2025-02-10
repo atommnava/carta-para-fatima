@@ -1,27 +1,36 @@
 // script.js
 
 // Function to handle button click events
+// Mensajes que se mostrarán en el botón "No"
+var noMessages = [
+    "Vamos pastelito :(",
+    "¿Estás segura?",
+    "De verdad, piénsalo bien...",
+    "Última oportunidad ;( 💔"
+    "Nooo ;c"
+];
+
+var noClickCount = 0; // Contador de clics en el botón "No"
+
 function selectOption(option) {
-    // Check which option was clicked
     if (option === 'yes') {
-        // Flash rainbow colors
         flashRainbowColors(function() {
-            document.getElementById('question').style.display = 'none'; // Hide the question
-            displayCatHeart(); // Display the cat-heart.gif
+            document.getElementById('question').style.display = 'none';
+            displayCatHeart();
         });
     } else if (option === 'no') {
-        // Change text on the "No" button to "You sure?"
-        document.getElementById('no-button').innerText = 'Vamos pastelito :('; 
-        document.getElementById('no-button').innerText = '1'; 
-        document.getElementById('no-button').innerText = '2'; 
-        document.getElementById('no-button').innerText = '3'; 
-        // Increase font size of "Yes" button
+        // Verificar si hay más mensajes en la lista
+        if (noClickCount < noMessages.length) {
+            document.getElementById('no-button').innerText = noMessages[noClickCount];
+            noClickCount++; // Incrementar el contador
+        }
+
+        // Aumentar el tamaño del botón "Sí"
         var yesButton = document.getElementById('yes-button');
         var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
-        var newSize = parseFloat(currentFontSize) * 2; // Increase font size by  * 2px
+        var newSize = parseFloat(currentFontSize) * 1.5; // Aumentar el tamaño en un 50%
         yesButton.style.fontSize = newSize + 'px';
     } else {
-        // If neither "Yes" nor "No" was clicked, show an alert message
         alert('Invalid option!');
     }
 }
