@@ -6,7 +6,7 @@ var noMessages = [
     "¿Segura?",
     "De verdad, piénsalo bien...",
     "Última oportunidad 💔",
-    "Me moriré!,
+    "Me moriré!",
     "Me morí x_x",
     "Nooo ;c"
 ];
