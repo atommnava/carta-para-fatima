@@ -1,13 +1,16 @@
 // Mensajes que se mostrarán en el botón "No"
 var noClickCount = 0;
 var noMessages = [
+  "Querida, por favor",
   "Vamos pastelito :(",
-  "En serio, segura?",
+  "Segura?",
   "De verdad, piénsalo bien...",
   "Última oportunidad 💔",
+  ":(((((",
   "Me moriréee!",
   "Me morí x_x",
-  "Noooooooo ;c"
+  "M_E_G_U_S_T_A_S",
+  "Noooo ;("
 ];
 
 function selectOption(option) {
@@ -17,7 +20,7 @@ function selectOption(option) {
       displayCatHeart(); // Mostrar imagen
 
       // Mostrar mensaje con la fuente Sacramento
-      displayMessage("Sabía que dirías que sí, panquesito! :)");
+      displayMessage("Awww, sabía que dirías que sí, panquesito! :)");
     });
   } else if (option === "no") {
     if (noClickCount < noMessages.length) {
