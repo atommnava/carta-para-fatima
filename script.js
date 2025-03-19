@@ -1,6 +1,7 @@
 // Mensajes que se mostrarán en el botón "No"
 var noClickCount = 0;
 var noMessages = [
+  "Te amo 3000000:)",
   "Querida, por favor",
   "Vamos pastelito :(",
   "Segura?",
