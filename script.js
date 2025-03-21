@@ -21,7 +21,7 @@ function selectOption(option) {
       displayCatHeart(); // Mostrar imagen
 
       // Mostrar mensaje con la fuente Sacramento
-      displayMessage("Awww, sabía que dirías que sí, panquesito! :)");
+      displayMessage("Awww, TEAMO PASTELITO! Sabía que dirías que sí :)");
     });
   } else if (option === "no") {
     if (noClickCount < noMessages.length) {
